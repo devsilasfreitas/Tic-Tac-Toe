@@ -1,0 +1,97 @@
+* {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #333;
+    --font-color: white;
+    --primary-color: rgb(0, 180, 0);
+    --border: 1px solid var(--font-color);
+    font-size: 1.5rem;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    padding: 5vh;
+    height: 100vh;
+
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 12vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: var(--primary-color);
+}
+
+main {
+    text-align: center;
+    padding-top: 30px;
+    align-content: center;
+}
+
+main > * {
+    margin: 0 10px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+.removepadding {
+    height: 0px;
+}
+
+input {
+    height: 30px;
+    background-color: var(--bg-color);
+    border: 2px var(--font-color) solid;
+    border-radius: 5px;
+    color: var(--font-color);
+    padding: 0px 5px;
+}
+
+#switchtheme {
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    border: 2px var(--font-color) solid;
+}
+
+#switchtheme:hover {
+    color: var(--bg-color);
+    background-color: var(--font-color);
+    border: 2px var(--bg-color solid);
+}
+
+#restartGame {
+    margin-top: 20px;
+}
