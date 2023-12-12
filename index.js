@@ -85,14 +85,12 @@ startButton.addEventListener('click', function () {
                 ev.currentTarget.innerText = 'X'
                 timePlayer.innerText = `${namePlayer2}'s turn`
                 array[parseInt(ev.currentTarget.id[0]) - 1][parseInt(ev.currentTarget.id[1]) - 1] = ev.currentTarget.innerText
-                console.log(array)
                 i++
                 checkWin(array, parseInt(ev.currentTarget.id[0]) - 1, parseInt(ev.currentTarget.id[1]) - 1, namePlayer1, restartGame)
             } else {
                 ev.currentTarget.innerText = 'O'
                 timePlayer.innerText = `${namePlayer1}'s turn`
                 array[parseInt(ev.currentTarget.id[0]) - 1][parseInt(ev.currentTarget.id[1]) - 1] = ev.currentTarget.innerText
-                console.log(array)
                 i++
                 checkWin(array, parseInt(ev.currentTarget.id[0]) - 1, parseInt(ev.currentTarget.id[1]) - 1, namePlayer2, restartGame)
             }
