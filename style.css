@@ -97,6 +97,6 @@ input {
 }
 
 .boxWin {
-    background-color: rgb(0, 180, 0);
+    background-color: var(--primary-color);
     color: var(--font-color);
 }
