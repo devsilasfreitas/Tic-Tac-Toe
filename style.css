@@ -95,3 +95,8 @@ input {
 #restartGame {
     margin-top: 20px;
 }
+
+.boxWin {
+    background-color: rgb(0, 180, 0);
+    color: var(--font-color);
+}

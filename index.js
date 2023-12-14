@@ -106,12 +106,35 @@ function checkWin (array, row, Column, namePlayer, restartGame) {
     if ((array[row][0] === array[row][1] && array[row][1] === array[row][2])) {
         timePlayer.innerText = `${namePlayer} win!!!`
         restartGame()
+        container.forEach(function (box) {
+            if (box.id[0] === `${row + 1}`) {
+                box.classList.add('boxWin')
+            }
+        })
     } else if (array[0][Column] === array[1][Column] && array[1][Column] === array[2][Column]) {
         timePlayer.innerText = `${namePlayer} win!!!`
         restartGame()
-    } else if (array[1][1] !== '' && ((array[0][0] === array[1][1] && array[1][1] === array[2][2]) || (array[0][2] === array[1][1] && array[1][1] === array[2][0]))) {
-        timePlayer.innerText = `${namePlayer} win!!!`
-        restartGame()
+        container.forEach(function (box) {
+            if (box.id[1] === `${Column + 1}`) {
+                box.classList.add('boxWin')
+            }
+        })
+    } else if (array[1][1] !== '') {
+        if (array[0][0] === array[1][1] && array[1][1] === array[2][2]) {
+            timePlayer.innerText = `${namePlayer} win!!!`
+            restartGame()
+            container.forEach(function (box) {
+                document.getElementById('11').classList.add('boxWin')
+                document.getElementById('22').classList.add('boxWin')
+                document.getElementById('33').classList.add('boxWin')
+            })
+        } else if ((array[0][2] === array[1][1] && array[1][1] === array[2][0])) {
+            timePlayer.innerText = `${namePlayer} win!!!`
+            restartGame()
+            document.getElementById('13').classList.add('boxWin')
+            document.getElementById('22').classList.add('boxWin')
+            document.getElementById('31').classList.add('boxWin')
+        }
     } else if (i === 9) {
         timePlayer.innerText = `Tie!!!`
         restartGame()
