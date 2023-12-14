@@ -75,7 +75,7 @@ startButton.addEventListener('click', function () {
     container.append(div1, div2, div3, div4, div5, div6, div7, div8, div9)
     const box = document.querySelectorAll('.box')
     let array = [['', '', ''], ['', '', ''], ['', '', '']]
-    timePlayer.innerText = `${namePlayer1}'s turn`
+    timePlayer.innerText = `${namePlayer1}1's turn`
     box.forEach (function (boxItem) {
         boxItem.addEventListener('click', function check(ev) {
             if (timePlayer.innerText === `${namePlayer1} win!!!` || timePlayer.innerText === `${namePlayer2} win!!!` || timePlayer.innerText === `Tie!!!`) {
@@ -103,32 +103,25 @@ startButton.addEventListener('click', function () {
 })
 
 function checkWin (array, row, Column, namePlayer, restartGame) {
-    const container = document.querySelector('.container')
     if ((array[row][0] === array[row][1] && array[row][1] === array[row][2])) {
         timePlayer.innerText = `${namePlayer} win!!!`
         restartGame()
-        container.forEach(function (box) {
-            if (box.id[0] === `${row + 1}`) {
-                box.classList.add('boxWin')
-            }
-        })
+        document.getElementById(`${row + 1}1`).classList.add('boxWin')
+        document.getElementById(`${row + 1}2`).classList.add('boxWin')
+        document.getElementById(`${row + 1}3`).classList.add('boxWin')
     } else if (array[0][Column] === array[1][Column] && array[1][Column] === array[2][Column]) {
         timePlayer.innerText = `${namePlayer} win!!!`
         restartGame()
-        container.forEach(function (box) {
-            if (box.id[1] === `${Column + 1}`) {
-                box.classList.add('boxWin')
-            }
-        })
+        document.getElementById(`1${Column + 1}`).classList.add('boxWin')
+        document.getElementById(`2${Column + 1}`).classList.add('boxWin')
+        document.getElementById(`3${Column + 1}`).classList.add('boxWin')
     } else if (array[1][1] !== '') {
         if (array[0][0] === array[1][1] && array[1][1] === array[2][2]) {
             timePlayer.innerText = `${namePlayer} win!!!`
             restartGame()
-            container.forEach(function (box) {
-                document.getElementById('11').classList.add('boxWin')
-                document.getElementById('22').classList.add('boxWin')
-                document.getElementById('33').classList.add('boxWin')
-            })
+            document.getElementById('11').classList.add('boxWin')
+            document.getElementById('22').classList.add('boxWin')
+            document.getElementById('33').classList.add('boxWin')
         } else if ((array[0][2] === array[1][1] && array[1][1] === array[2][0])) {
             timePlayer.innerText = `${namePlayer} win!!!`
             restartGame()
@@ -141,6 +134,8 @@ function checkWin (array, row, Column, namePlayer, restartGame) {
         restartGame()
     }
 }
+
+
 
 const switchTheme = document.getElementById('switchtheme')
 switchTheme.addEventListener('click', function() {
