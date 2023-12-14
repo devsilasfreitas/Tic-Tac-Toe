@@ -102,7 +102,7 @@ startButton.addEventListener('click', function () {
     })
 })
 
-function checkWin (array, row, Column, namePlayer, restartGame, container) {
+function checkWin (array, row, Column, namePlayer, restartGame) {
     const container = document.querySelector('.container')
     if ((array[row][0] === array[row][1] && array[row][1] === array[row][2])) {
         timePlayer.innerText = `${namePlayer} win!!!`
