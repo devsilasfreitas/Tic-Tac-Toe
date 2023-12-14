@@ -75,7 +75,7 @@ startButton.addEventListener('click', function () {
     container.append(div1, div2, div3, div4, div5, div6, div7, div8, div9)
     const box = document.querySelectorAll('.box')
     let array = [['', '', ''], ['', '', ''], ['', '', '']]
-    timePlayer.innerText = `${namePlayer1}1's turn`
+    timePlayer.innerText = `${namePlayer1}'s turn`
     box.forEach (function (boxItem) {
         boxItem.addEventListener('click', function check(ev) {
             if (timePlayer.innerText === `${namePlayer1} win!!!` || timePlayer.innerText === `${namePlayer2} win!!!` || timePlayer.innerText === `Tie!!!`) {
