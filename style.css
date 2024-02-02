@@ -26,6 +26,7 @@ button {
     color: var(--bg-color);
     border-radius: 5px;
     padding: 0.5rem;
+    cursor: pointer;
 }
 
 header {
@@ -90,6 +91,7 @@ input {
     color: var(--bg-color);
     background-color: var(--font-color);
     border: 2px var(--bg-color solid);
+    cursor: pointer;
 }
 
 #restartGame {
