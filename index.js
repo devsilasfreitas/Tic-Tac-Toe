@@ -16,6 +16,7 @@ function createDiv (id, borderTop, borderBottom, borderRight, borderLeft, classN
     div.style.borderBottom = borderBottom
     div.style.borderRight = borderRight
     div.style.borderLeft = borderLeft
+    div.style.cursor = 'pointer'
     div.innerText = ''
     return div
 }
@@ -96,7 +97,7 @@ startButton.addEventListener('click', function () {
             }
 
             
-            
+            boxItem.style.cursor = 'default'
             boxItem.removeEventListener('click', check)
         })
     })
